@@ -10,11 +10,7 @@
             text-align: right;
             direction: rtl;
             padding-top: 100px;
-            /* שינויים לתמונת הרקע */
-            background-image: url('background.jpg'); /* שם הקובץ שהעלית */
-            background-size: contain; /* יבטיח שהתמונה כולה תופיע במסך */
-            background-position: center; /* ימקם את התמונה במרכז */
-            background-repeat: no-repeat; /* ימנע מהתמונה להשתכפל */
+            /* הסרנו את תמונת הרקע מכאן (מ-body) */
         }
         .container {
             max-width: 600px;
@@ -23,26 +19,39 @@
             padding: 40px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            /* הוספנו את תמונת הרקע לכאן (ל-container) */
+            background-image: url('anonymous.png'); /* שנה ל'anonymous.png' אם זה השם */
+            background-size: 80%; /* שינה לגודל ספציפי באחוזים - 80% מהקונטיינר */
+            background-repeat: no-repeat;
+            background-position: center 20px; /* ממקם במרכז, 20px מלמעלה */
+            min-height: 450px; /* מגדיר גובה מינימלי לתיבה כדי שתכיל את התמונה והטקסט */
+            position: relative; /* נחוץ כדי ש-z-index יעבוד על האלמנטים בפנים */
+        }
+        .container h1, .container p {
+            position: relative;
+            z-index: 1; /* מוודא שהטקסט יהיה מעל התמונה */
         }
         h1 {
             color: #d9534f;
             font-size: 3em;
             margin-bottom: 20px;
+            text-align: center; /* כדי שהכותרת תהיה במרכז מעל המסכה */
         }
         p {
             color: #333;
             font-size: 1.2em;
             margin-bottom: 10px;
+            text-align: center; /* גם הפסקאות למרכז */
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>שגיאה!</h1>
-        <p>עובדי נתיב היקרים.</p>
+        <p>עובדי נתיב היקרים,</p>
         <p>הדף שאליו ניסיתם לגשת לא נמצא.</p>
-        <p>אבל עכשיו תחשבו שנייה ...?</p>
-        <p>מה הרגע למדתם בהדרכה ? לא להאמין לכלום 😊?</p>
+        <p>אבל עכשיו תחשבו שניה...?</p>
+        <p>מה הרגע למדתם בהדרכה? לא להאמין לכלום 😲?</p>
         <p>ה-QR הזה היה אמור להיות זדוני. אם סרקתם אותו - לא למדתם כלום!</p>
     </div>
 </body>
