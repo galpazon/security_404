@@ -7,14 +7,19 @@
         body {
             background-color: #f1f1f1;
             font-family: Arial, sans-serif;
-            text-align: right; /* יישור לימין לכל הטקסט */
-            direction: rtl;    /* כיוון טקסט לימין */
+            text-align: right;
+            direction: rtl;
             padding-top: 100px;
+            /* שינויים לתמונת הרקע */
+            background-image: url('background.jpg'); /* שם הקובץ שהעלית */
+            background-size: contain; /* יבטיח שהתמונה כולה תופיע במסך */
+            background-position: center; /* ימקם את התמונה במרכז */
+            background-repeat: no-repeat; /* ימנע מהתמונה להשתכפל */
         }
         .container {
             max-width: 600px;
             margin: 0 auto;
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.85);
             padding: 40px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -22,32 +27,22 @@
         h1 {
             color: #d9534f;
             font-size: 3em;
-            margin-bottom: 20px; /* מרווח תחתון לכותרת */
+            margin-bottom: 20px;
         }
         p {
-            color: #555;
+            color: #333;
             font-size: 1.2em;
-            margin-bottom: 10px; /* מרווח תחתון לפסקאות */
-        }
-        .warning-image {
-            width: 150px; /* גודל התמונה */
-            height: auto;
-            margin-bottom: 30px; /* מרווח תחתון מהתמונה */
-            display: block; /* כדי שהתמונה תהיה בלוק ותוכל לקבל מרווחים כמו שצריך */
-            margin-left: auto; /* ממקם את התמונה באמצע ב-RTL */
-            margin-right: auto;
+            margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <img src="background.jpg" alt="אזהרה וירוס" class="warning-image">
-
         <h1>שגיאה!</h1>
         <p>עובדי נתיב היקרים.</p>
         <p>הדף שאליו ניסיתם לגשת לא נמצא.</p>
-        <p>אבל עכשיו תחשבו שנייה ... מה למדתם בהדרכה?</p>
-        <p>מה הרגע למדתי בהדרכה ? לא להאמין לכלום 😊?</p>
+        <p>אבל עכשיו תחשבו שנייה ...?</p>
+        <p>מה הרגע למדתם בהדרכה ? לא להאמין לכלום 😊?</p>
         <p>ה-QR הזה היה אמור להיות זדוני. אם סרקתם אותו - לא למדתם כלום!</p>
     </div>
 </body>
