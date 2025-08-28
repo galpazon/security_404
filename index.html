@@ -10,38 +10,32 @@
             text-align: right;
             direction: rtl;
             padding-top: 100px;
-            /* הסרנו את תמונת הרקע מכאן (מ-body) */
         }
         .container {
             max-width: 600px;
             margin: 0 auto;
-            background-color: rgba(255, 255, 255, 0.85);
+            background-color: rgba(255, 255, 255, 0.95); /* הגברנו את השקיפות ל-95% כדי שהרקע יהיה בהיר יותר */
             padding: 40px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            /* הוספנו את תמונת הרקע לכאן (ל-container) */
-            background-image: url('background.jpg'); /* שנה ל'anonymous.png' אם זה השם */
-            background-size: 80%; /* שינה לגודל ספציפי באחוזים - 80% מהקונטיינר */
+            background-image: url('background.jpg'); /* שנה לשם הקובץ שהעלית */
+            background-size: 80%;
             background-repeat: no-repeat;
-            background-position: center 20px; /* ממקם במרכז, 20px מלמעלה */
-            min-height: 450px; /* מגדיר גובה מינימלי לתיבה כדי שתכיל את התמונה והטקסט */
-            position: relative; /* נחוץ כדי ש-z-index יעבוד על האלמנטים בפנים */
-        }
-        .container h1, .container p {
+            background-position: center 20px;
+            min-height: 450px;
             position: relative;
-            z-index: 1; /* מוודא שהטקסט יהיה מעל התמונה */
         }
         h1 {
             color: #d9534f;
             font-size: 3em;
             margin-bottom: 20px;
-            text-align: center; /* כדי שהכותרת תהיה במרכז מעל המסכה */
+            text-align: center;
         }
         p {
-            color: #333;
+            color: #333; /* צבע טקסט כהה */
             font-size: 1.2em;
             margin-bottom: 10px;
-            text-align: center; /* גם הפסקאות למרכז */
+            text-align: center;
         }
     </style>
 </head>
